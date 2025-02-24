@@ -31,9 +31,6 @@ services:
   app:
     image: ghcr.io/maybe-finance/maybe:latest
 
-#    volumes:
-#      - app-storage:/rails/storage
-
     ports:
       - 3000:3000
 
@@ -57,8 +54,6 @@ services:
   postgres:
     image: postgres:16
     restart: unless-stopped
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_DB: ${POSTGRES_DB}
@@ -68,7 +63,3 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-
-#volumes:
-#  app-storage:
-#  postgres-data:
