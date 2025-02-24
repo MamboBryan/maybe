@@ -31,8 +31,8 @@ services:
   app:
     image: ghcr.io/maybe-finance/maybe:latest
 
-    volumes:
-      - app-storage:/rails/storage
+#    volumes:
+#      - app-storage:/rails/storage
 
     ports:
       - 3000:3000
